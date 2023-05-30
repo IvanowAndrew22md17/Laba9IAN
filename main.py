@@ -9,8 +9,10 @@ def f1():
     c = "3.jpg"
     d = "4.png"
     e = "5.jpg"
+    ca=0
     g = [a, b, c, d, e]
     for file in g:
+        ca += 1
         img = Image.open(file)
         newimg = img.filter(ImageFilter.SMOOTH)
         newimg.show()
@@ -18,7 +20,7 @@ def f1():
             os.mkdir("C:/Users/Запасной/Desktop/прога/Laba9IAN")
         except:
             pass
-        newimg.save("C:/Users/Запасной/Desktop/прога/Laba9IAN/newimg.png")
+        newimg.save(f'C:/Users/Запасной/Desktop/прога/Laba9IAN/newimg({ca}).png')
 if x==1:
     f1()
 
@@ -29,8 +31,10 @@ def f2():
     c = "3.jpg"
     d = "4.png"
     e = "5.jpg"
+    ca = 0
     g = [a, b, c, d, e]
     for file in g:
+        ca += 1
         if file.endswith('.jpg') or file.endswith('.png'):
             img = Image.open(file)
             new_img = img.filter(ImageFilter.SMOOTH)
@@ -39,7 +43,7 @@ def f2():
                 os.mkdir("C:/Users/Запасной/Desktop/прога/Laba9IAN")
             except:
                 pass
-            new_img.save("C:/Users/Запасной/Desktop/прога/Laba9IAN/new_img.png")
+            new_img.save(f"C:/Users/Запасной/Desktop/прога/Laba9IAN/new_img({ca}).png")
 if x==2:
     f2()
 
