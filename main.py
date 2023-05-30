@@ -1,6 +1,6 @@
 from PIL import Image,ImageFilter
 import os
-x = input("введите номер задания:")
+x = int(input("введите номер задания:"))
 
 #9.1
 def f1():
